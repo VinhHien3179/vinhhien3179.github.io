@@ -1,18 +1,16 @@
 (function ($) {
     'use strict';
-
-    var alime_window = $(window);
+// function loadActive(){
+    var alime_window =  $('#container-content');
 
     // ****************************
     // :: 1.0 Preloader Active Code
     // ****************************
 
-    alime_window.on('load', function () {
-        $('#preloader').fadeOut('1000', function () {
-            $(this).remove();
-        });
-    });
 
+    $('#preloader').fadeOut('1000', function () {
+        $(this).remove();
+    });
     // ****************************
     // :: 2.0 ClassyNav Active Code
     // ****************************
@@ -209,5 +207,8 @@
     $('a[href="#"]').on('click', function ($) {
         $.preventDefault();
     });
+//}
+
+    
 
 })(jQuery);

@@ -286,7 +286,11 @@ input:required {
 
 .section-padding-80-50 {
   padding-top: 80px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  background: white;
+  position: relative;
+  z-index: 2;
+}
 
 .section-padding-100 {
   padding-top: 100px;
@@ -545,28 +549,28 @@ input:required {
       .classy-nav-container .classy-navbar .nav-brand {
         max-width: 90px;
         margin-right: 15px; } }
-    .classy-nav-container .classy-navbar .classynav ul li a {
+    .classy-nav-container .classy-navbar .classynav ul li div {
       font-size: 16px;
       text-transform: capitalize;
       color: #ffffff;
       font-weight: 500;
       padding: 0 20px; }
-      .classy-nav-container .classy-navbar .classynav ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li a:focus {
+      .classy-nav-container .classy-navbar .classynav ul li div:hover, .classy-nav-container .classy-navbar .classynav ul li div:focus {
         color: #fc6060; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .classy-nav-container .classy-navbar .classynav ul li a {
+        .classy-nav-container .classy-navbar .classynav ul li div {
           font-size: 14px; } }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .classy-nav-container .classy-navbar .classynav ul li a {
+        .classy-nav-container .classy-navbar .classynav ul li div {
           font-size: 14px;
           color: #252525; }
-          .classy-nav-container .classy-navbar .classynav ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li a:focus {
+          .classy-nav-container .classy-navbar .classynav ul li div:hover, .classy-nav-container .classy-navbar .classynav ul li div:focus {
             color: #fc6060; } }
       @media only screen and (max-width: 767px) {
-        .classy-nav-container .classy-navbar .classynav ul li a {
+        .classy-nav-container .classy-navbar .classynav ul li div {
           font-size: 14px;
           color: #252525; }
-          .classy-nav-container .classy-navbar .classynav ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li a:focus {
+          .classy-nav-container .classy-navbar .classynav ul li div:hover, .classy-nav-container .classy-navbar .classynav ul li div:focus {
             color: #fc6060; } }
     .classy-nav-container .classy-navbar .classynav ul li.cn-dropdown-item ul li a, .classy-nav-container .classy-navbar .classynav ul li.megamenu-item ul li a {
       font-size: 14px;
@@ -578,10 +582,10 @@ input:required {
       .classy-nav-container .classy-navbar .classynav ul li.cn-dropdown-item ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li.cn-dropdown-item ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li.megamenu-item ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li.megamenu-item ul li a:hover {
         color: #fc6060; }
 
-.classynav ul li.active a {
+.classynav ul li.active div {
   position: relative;
   z-index: 1; }
-  .classynav ul li.active a::before {
+  .classynav ul li.active div::before {
     width: calc(100% - 40px);
     height: 2px;
     background-color: #fc6060;
@@ -590,13 +594,14 @@ input:required {
     left: 0;
     z-index: 1;
     content: '';
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%); }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .classynav ul li.active a::before {
+      .classynav ul li.active div::before {
         display: none; } }
     @media only screen and (max-width: 767px) {
-      .classynav ul li.active a::before {
+      .classynav ul li.active div::before {
         display: none; } }
 
 .classynav ul li.has-down > a::after,
@@ -932,7 +937,11 @@ input:required {
     position: absolute;
     top: -38px;
     left: 50%;
-    margin-left: -38px; }
+    margin-left: -38px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
   .why-choose-us-content h4 {
     font-size: 20px;
     font-weight: 500;
@@ -1437,6 +1446,7 @@ input:required {
   position: relative;
   z-index: 1;
   padding: 40px;
+  height: 100%;
   -webkit-box-shadow: 0 4px 20px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 20px 3px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -1447,7 +1457,9 @@ input:required {
   background-color: #ffffff; }
   .team-content-area .member-thumb {
     margin: 0 auto 40px;
-    width: 165px; }
+    width: 165px;
+    height: 165px;
+  }
     .team-content-area .member-thumb img {
       -webkit-transition-duration: 500ms;
       -o-transition-duration: 500ms;
@@ -1658,3 +1670,20 @@ input:required {
         align-items: center;
         align-content: center;
     }
+
+
+  .about-us-area.section-padding-80-0.clearfix {
+      position: relative;
+      background: white;
+      z-index: 2;
+  }
+
+
+.why-choose-us-content p {
+    height: 110px;
+}
+
+section.why-choose-us-area.bg-gray.section-padding-80-0.clearfix {
+  position: relative;
+  z-index: 2;
+}
